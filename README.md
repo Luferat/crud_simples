@@ -59,7 +59,7 @@ Baixe e descompacte o arquivo baixado do **Spring Initializr** e cole sobre o pr
 
 ## `application.properties`
 
-Configure o `application.properties` para usar o **H2 Database**:
+Configure o [`application.properties`](https://github.com/Luferat/crud_simples/blob/master/src/main/resources/application.properties) para usar o **H2 Database**:
 
 ```yml
 spring.application.name=CRUD Simples
@@ -79,7 +79,7 @@ spring.jpa.hibernate.ddl-auto=update
 
 Usamos o aplicativo **Postman** para testar as requisições e respostas da API.
 
-Os _requests_ estão em `CRUD Simples.postman_collection.json`.
+Os _requests_ estão em [`CRUD Simples.postman_collection.json`](https://github.com/Luferat/crud_simples/blob/master/CRUD%20Simples.postman_collection.json).
 Baixe o arquivo e importe no Postman.
 
 
@@ -99,7 +99,7 @@ price DECIMAL(10,2),
 status ENUM('ON', 'OFF')
 ```
 
-O modelo está em `model.Coisa` e já criamos, em seguida, o _repository_ do mesmo em `repository.CoisaRepository`.
+O modelo está em [`model.Coisa`](https://github.com/Luferat/crud_simples/blob/master/src/main/java/br/senac/rj/crud/model/Coisa.java) e já criamos, em seguida, o _repository_ do mesmo em [`repository.CoisaRepository`](https://github.com/Luferat/crud_simples/blob/master/src/main/java/br/senac/rj/crud/repository/CoisaRepository.java).
 
 
 ## Populando o Banco de Dados
@@ -108,12 +108,12 @@ Inicie o aplicativo para fazer o primeiro teste e também popular a tabela "COIS
 
 Acesse, configure e se conecte ao **H2 Console**, para acessar o **H2 Database**.
 
-Obtenha o arquivo `crudsimples.sql` e rode o script no **H2 Console**.
+Obtenha o arquivo [`crudsimples.sql`](https://github.com/Luferat/crud_simples/blob/master/crudsimplesdb.sql) e rode o script no **H2 Console**.
 
 
 ## Formatação do response
 
-A classe `tool.ApiResponse`, devidamente comentada, formata os _JSON_ de _response_, o que melhora a padronização.
+A classe [`tool.ApiResponse`](https://github.com/Luferat/crud_simples/blob/master/src/main/java/br/senac/rj/crud/tool/ApiResponse.java), devidamente comentada, formata os _JSON_ de _response_, o que melhora a padronização.
 
 
 ## Cadastrar novo registro (CREATE)
@@ -131,9 +131,9 @@ A classe `tool.ApiResponse`, devidamente comentada, formata os _JSON_ de _respon
    ```
 > Os valores dos campos `id`, `date` e `status` são gerados pelo aplicativo.
 
-Como não enviamos todos os campos, vamos criar o DTO `dto.CoisaRequestDTO` que aproveitamos para validar os dados da requisição usando `Spring Boot Validator`. A classe está devidamente comentada.
+Como não enviamos todos os campos, vamos criar o DTO [`dto.CoisaRequestDTO`](https://github.com/Luferat/crud_simples/blob/master/src/main/java/br/senac/rj/crud/dto/CoisaRequestDTO.java) que aproveitamos para validar os dados da requisição usando _Spring Boot Validator_.
 
-O controller para este endpoint está em `controller.CoisaCadastroController`.
+O controller para este endpoint está em [`controller.CoisaCadastroController`](https://github.com/Luferat/crud_simples/blob/master/src/main/java/br/senac/rj/crud/controller/CoisaCadastroController.java).
 
 
 ## Listar todos os registros (READ All)
@@ -143,9 +143,9 @@ Listar todos os registros ordenados pela `date` mais recente e com `status.ON`.
 - Endpoint: `GET /api/read`
 - Body: `none`
 
-Vamos retornar apenas os campos `id`, `name` e `imageURL`, para isso, vamos criar o _DTO_ que está em `dto.CoisaListagemDTO`.
+Vamos retornar apenas os campos `id`, `name` e `imageURL`, para isso, vamos criar o _DTO_ que está em [`dto.CoisaListagemDTO`](https://github.com/Luferat/crud_simples/blob/master/src/main/java/br/senac/rj/crud/dto/CoisaListagemDTO.java).
 
-Na sequência, crie o `controller.CoisaListagemController` que atende aos requisitos.
+Na sequência, crie o [`controller.CoisaListagemController`](https://github.com/Luferat/crud_simples/blob/master/src/main/java/br/senac/rj/crud/controller/CoisaListagemController.java) que atende aos requisitos.
 
 > Teste este e todos os _endpoint_ usando o **Postman**.
 
@@ -162,7 +162,7 @@ Este endpoint terá as seguintes características:
  - Retorna o registro completo da `COISA`
  - Apenas se `status.ON`
 
-Este controller está em `controller.CoisaDetalheController`.
+Este controller está em [`controller.CoisaDetalheController`](https://github.com/Luferat/crud_simples/blob/master/src/main/java/br/senac/rj/crud/controller/CoisaDetalheController.java).
 
 
 ## Atualizar registro (UPDATE)
@@ -173,9 +173,9 @@ Este endpoint receberá um `{id}` como parte da URL, para identificar o registro
  - Body: raw JSON (Exemplo abaixo)
 > Campos `id`, `date` e `status` não são atualizados.
 
-Vamos reaproveitar o `dto.CoisaRequestDTO` que já criamos, pois ele já contém os campos que podem ser atualizados (name, description, location, imageUrl, price).
+Vamos reaproveitar o [`dto.CoisaRequestDTO`](https://github.com/Luferat/crud_simples/blob/master/src/main/java/br/senac/rj/crud/dto/CoisaRequestDTO.java) que já criamos, pois ele já contém os campos que podem ser atualizados (name, description, location, imageUrl, price).
 
-O endpoint está configurado em `controller.`
+O endpoint está configurado em [`controller.CoisaAtualizacaoController`](https://github.com/Luferat/crud_simples/blob/master/src/main/java/br/senac/rj/crud/controller/CoisaAtualizacaoController.java).
 
 
 ## Apagar registro (DELETE)
@@ -185,4 +185,4 @@ Neste endpoint, não vamos realmente apagar a "COISA", vamos sim marcar o regist
  - Endpoint: `DELETE /api/delete/{id}`
  - Body: `none`
 
-O `controller` deste endpoint está em `controller.CoisaDeleteController`.
+O `controller` deste endpoint está em [`controller.CoisaDeleteController`](https://github.com/Luferat/crud_simples/blob/master/src/main/java/br/senac/rj/crud/controller/CoisaDeleteController.java).
