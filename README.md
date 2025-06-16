@@ -2,7 +2,7 @@
 
 Um CRUD bem simples, experimental e didático, na forma de API REST.
 
-> As classes do aplicativo no repositório estão devidamente comentadas.
+> As classes do aplicativo, neste repositório, estão devidamente comentadas.
 
 
 ## Requisitos
@@ -21,7 +21,7 @@ Crie o projeto Java no IntelliJ CE com os seguintes parâmetros:
  - New Project: `Java`
  - Name: `crud_simples`
  - Location: `~/Documents/java`
- - ☑ Create Git repository
+ - Marque `☑ Create Git repository`
  - Build system: `Mavin`
  - JDK: `temurin-21`
  - GroupId: `br.senac.rj`
@@ -45,11 +45,11 @@ Crie o projeto Spring Boot no **Spring Initializr**:
     - Packaging: `Jar`
     - Java: `21`
  - Dependencies:
-   - Spring Web
-   - Spring Data JPA
-   - H2 Database
-   - Lombok
-   - Validation
+   - **Spring Web:** para construir aplicações Web, incluindo APIs REST. Inclui o Spring MVC.
+   - **Spring Data JPA:** Facilita a interação com o banco de dados usando o _JPA_ (Java Persistence API).
+   - **H2 Database**: banco de dados em memória que usaremos para persistência.
+   - **Lombok:** para reduzir o código boilerplate (construtores, getters, setters, etc.).
+   - **Validation:** para validação dos dados de requisição.
 
 
 ## Merge
@@ -79,7 +79,7 @@ spring.jpa.hibernate.ddl-auto=update
 
 Usamos o aplicativo **Postman** para testar as requisições e respostas da API.
 
-Os requests estão em `CRUD Simples.postman_collection.json`.
+Os _requests_ estão em `CRUD Simples.postman_collection.json`.
 Baixe o arquivo e importe no Postman.
 
 
@@ -108,7 +108,7 @@ Inicie o aplicativo para fazer o primeiro teste e também popular a tabela "COIS
 
 Acesse, configure e se conecte ao **H2 Console**, para acessar o **H2 Database**.
 
-Obtenha o arquivo `doc/crudsimples.sql` e rode o script no **H2 Console**.
+Obtenha o arquivo `crudsimples.sql` e rode o script no **H2 Console**.
 
 
 ## Formatação do response
