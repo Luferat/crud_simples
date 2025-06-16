@@ -1,8 +1,10 @@
 # CRUD Simples
+`16/06/2025 By Luferat`
 
 Um CRUD bem simples, experimental e didático, na forma de API REST com Java e Spring Boot.
 
 > As classes do aplicativo, neste repositório, estão devidamente comentadas.
+> Cada _endpoint_ está definido em uma classe (controller) separado para melhor entendimento.
 
 
 ## Requisitos
@@ -186,3 +188,8 @@ Neste endpoint, não vamos realmente apagar a "COISA", vamos sim marcar o regist
  - Body: `none`
 
 O `controller` deste endpoint está em [`controller.CoisaDeleteController`](https://github.com/Luferat/crud_simples/blob/master/src/main/java/br/senac/rj/crud/controller/CoisaDeleteController.java).
+
+
+## Licensas
+
+ - **Códigos:** 
