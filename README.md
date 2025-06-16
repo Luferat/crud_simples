@@ -1,6 +1,6 @@
 # CRUD Simples
 
-Um CRUD bem simples, experimental e didático, na forma de API REST.
+Um CRUD bem simples, experimental e didático, na forma de API REST com Java e Spring Boot.
 
 > As classes do aplicativo, neste repositório, estão devidamente comentadas.
 
