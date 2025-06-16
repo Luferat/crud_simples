@@ -193,4 +193,4 @@ O `controller` deste endpoint está em [`controller.CoisaDeleteController`](http
 ## Licenças
 
  - **Códigos:** [MIT License](https://github.com/Luferat/crud_simples/blob/master/LICENSE.md)
- - **Documentação:** <a href="https://github.com/Luferat/crud_simples">CRUD Simples</a> © 2025 by <a href="https://github.com/Luferat">André Luferat</a> is licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a><img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/sa.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;">
+ - **Documentação:** <a href="https://github.com/Luferat/crud_simples">CRUD Simples</a> © 2025 by <a href="https://github.com/Luferat">André Luferat</a> is licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>.
