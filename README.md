@@ -190,6 +190,15 @@ Neste endpoint, não vamos realmente apagar a "COISA", vamos sim marcar o regist
 O `controller` deste endpoint está em [`controller.CoisaDeleteController`](https://github.com/Luferat/crud_simples/blob/master/src/main/java/br/senac/rj/crud/controller/CoisaDeleteController.java).
 
 
+## Questões rápidas
+
+ - O que é o **Spring Boot** e por que usamos para fazer sites e APIs?
+ - O que é o **Spring MVC**?
+ - O que são "model" e "repository" na arquitetura de aplicativos Spring Boot?
+ - O que é um **DTO** e por que parte das validações das requisições são delegadas a ele?
+ - O que é são pacotes (packages) e para que servem os "controllers"?
+   
+
 ## Licenças
 
  - **Códigos:** [MIT License](https://github.com/Luferat/crud_simples/blob/master/LICENSE.md)
