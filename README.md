@@ -59,7 +59,7 @@ Crie o projeto Spring Boot no **Spring Initializr**:
 Baixe e descompacte o arquivo baixado do **Spring Initializr** e cole sobre o projeto do **IntelliJ CE** para gerar o projeto **Java Spring Boot**.
 
 
-## `application.properties`
+## Setup do Banco de Dados
 
 Configure o [`application.properties`](https://github.com/Luferat/crud_simples/blob/master/src/main/resources/application.properties) para usar o **H2 Database**:
 
