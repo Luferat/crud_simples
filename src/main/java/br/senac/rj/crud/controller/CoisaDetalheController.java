@@ -1,8 +1,8 @@
-package br.senac.rj.crud.controller; // Ajuste o pacote conforme sua estrutura
+package br.senac.rj.crud.controller;
 
 import br.senac.rj.crud.model.Coisa;
 import br.senac.rj.crud.repository.CoisaRepository;
-import br.senac.rj.crud.tool.ApiResponse; // Importe do pacote tool
+import br.senac.rj.crud.tool.ApiResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/api") // Prefixo para todos os endpoints neste controller
+@RequestMapping("/api")
 public class CoisaDetalheController {
 
     @Autowired
