@@ -48,7 +48,7 @@ Crie o projeto Spring Boot no **Spring Initializr**:
     - Java: `21`
  - Dependencies:
    - **Spring Web:** para construir aplicações Web, incluindo APIs REST. Inclui o Spring MVC.
-   - **Spring Data JPA:** Facilita a interação com o banco de dados usando o _JPA_ (Java Persistence API).
+   - **Spring Data JPA:** facilita a interação com o banco de dados usando o _JPA_ (Java Persistence API).
    - **H2 Database**: banco de dados em memória que usaremos para persistência.
    - **Lombok:** para reduzir o código boilerplate (construtores, getters, setters, etc.).
    - **Validation:** para validação dos dados de requisição.
