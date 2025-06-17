@@ -5,9 +5,9 @@ import lombok.Setter;
 import lombok.NoArgsConstructor;
 import lombok.AllArgsConstructor;
 
-import jakarta.validation.constraints.NotBlank; // <-- Mudança aqui!
-import jakarta.validation.constraints.NotNull;  // <-- Mudança aqui!
-import jakarta.validation.constraints.Size;    // <-- Mudança aqui!
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
 import java.math.BigDecimal;
 
 @Getter
@@ -23,9 +23,9 @@ public class CoisaRequestDTO {
     @NotBlank(message = "A descrição é obrigatória e não pode ser vazia.")
     private String description;
 
-    private String location; // Pode ser nulo
+    private String location;
 
-    private String imageUrl; // Pode ser nulo
+    private String imageUrl;
 
     @NotNull(message = "O preço é obrigatório.")
     private BigDecimal price;
