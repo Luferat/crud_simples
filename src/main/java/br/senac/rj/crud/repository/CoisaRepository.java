@@ -6,5 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface CoisaRepository extends JpaRepository<Coisa, Long> {
-    // Spring Data JPA magic! Métodos CRUD básicos já vêm "de graça" aqui.
+    // Métodos CRUD básicos já vêm "de graça" aqui.
 }
