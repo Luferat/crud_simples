@@ -9,8 +9,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import jakarta.validation.Valid; // Importe jakarta.validation.Valid
-
+import jakarta.validation.Valid;
 import java.util.Optional;
 
 @RestController
@@ -40,10 +39,7 @@ public class CoisaAtualizacaoController {
                     .body(ApiResponse.error(HttpStatus.BAD_REQUEST, "A Coisa com o ID " + id + " está inativa e não pode ser atualizada."));
         }
 
-        // 3. Obtém a Coisa existente para atualização (já sabemos que existe e está ON)
-        // Coisa coisaExistente = coisaOptional.get(); // Já obtido acima
-
-        // 4. Atualiza os campos permitidos do objeto Coisa existente
+        // 3. Atualiza os campos permitidos do objeto Coisa existente
         //    Os campos 'id', 'date_created' e 'status' não são atualizados aqui.
         coisaExistente.setName(coisaRequestDTO.getName());
         coisaExistente.setDescription(coisaRequestDTO.getDescription());
@@ -51,10 +47,10 @@ public class CoisaAtualizacaoController {
         coisaExistente.setImageUrl(coisaRequestDTO.getImageUrl());
         coisaExistente.setPrice(coisaRequestDTO.getPrice());
 
-        // 5. Salva a Coisa atualizada no banco de dados
+        // 4. Salva a Coisa atualizada no banco de dados
         Coisa coisaAtualizada = coisaRepository.save(coisaExistente);
 
-        // 6. Retorna a resposta de sucesso com a Coisa atualizada
+        // 5. Retorna a resposta de sucesso com a Coisa atualizada
         return ResponseEntity
                 .ok(ApiResponse.success(HttpStatus.OK, "Coisa atualizada com sucesso!", coisaAtualizada));
     }
