@@ -1,4 +1,4 @@
-package br.senac.rj.crud.controller; // Ajuste o pacote conforme sua estrutura
+package br.senac.rj.crud.controller;
 
 import br.senac.rj.crud.dto.CoisaListagemDTO;
 import br.senac.rj.crud.model.Coisa;
@@ -16,7 +16,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @RestController
-@RequestMapping("/api") // Prefixo para todos os endpoints neste controller
+@RequestMapping("/api")
 public class CoisaListagemController {
 
     @Autowired
